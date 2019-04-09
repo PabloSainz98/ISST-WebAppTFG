@@ -26,10 +26,8 @@ public class Form2ProfessorServlet extends HttpServlet {
 		TFG tfg = tfgdao.read(email);
 		tfg.setStatus(tfg.getStatus()+1);
 		tfgdao.update(tfg);
-		
-		Subject currentUser = SecurityUtils.getSubject();
-		
-		resp.sendRedirect(req.getContextPath() + "/ProfessorServlet?email=" + currentUser.getPrincipal());
+
+		resp.sendRedirect(req.getContextPath() + "/ProfessorServlet?email=" + email);
 	}
 
 }

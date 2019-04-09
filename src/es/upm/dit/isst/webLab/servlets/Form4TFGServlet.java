@@ -42,9 +42,7 @@ public class Form4TFGServlet extends HttpServlet {
 
 		tfgdao.update(tfg);
 
-		Subject currentUser = SecurityUtils.getSubject();
-
-		resp.sendRedirect(req.getContextPath() + "/TFGServlet?email=" + currentUser.getPrincipal());
+		resp.sendRedirect(req.getContextPath() + "/TFGServlet?email=" + email);
 	}
 
 }
