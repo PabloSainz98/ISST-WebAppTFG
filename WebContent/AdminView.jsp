@@ -70,7 +70,7 @@
 					<td>${tfgi.advisor.name }</td>
 					<td>${tfgi.status }</td>
 					<td><c:if test="${tfgi.status > 3}">
-							<form action="ServeFileServlet">
+							<form action="ServeFileServlet" method="get">
 								<input type="hidden" name="email" value="${tfgi.email}" />
 								<button type="submit">Descargar</button>
 							</form>

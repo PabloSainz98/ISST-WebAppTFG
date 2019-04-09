@@ -21,6 +21,7 @@ public class CreateProfessorServlet extends HttpServlet {
 		String name = req.getParameter( "name" );
 		String password = req.getParameter( "password" );
 		String email = req.getParameter( "email" );
+		
 		Professor professor = new Professor();
 		professor.setName( name );
 		professor.setEmail( email );

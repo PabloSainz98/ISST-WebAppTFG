@@ -26,7 +26,7 @@ public class CreateTFGServlet extends HttpServlet {
 		String email = req.getParameter("email");
 		String title = req.getParameter("title");
 		String advisorEmail = req.getParameter("advisor");
-		int status = 0;
+		int status = 1;
 		
 		ProfessorDAO pdao = ProfessorDAOImplementation.getInstance();
 		Professor advisor = pdao.read(advisorEmail);
